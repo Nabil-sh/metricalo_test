@@ -72,6 +72,10 @@ class ACIPaymentProvider implements PaymentProviderInterface
     }
 
 
+    /**
+     * @param array $responseContent
+     * @return array
+     */
     public function mapContentToUnifiedResponse(array $responseContent): array
     {
         $dateTime = \DateTime::createFromFormat('Y-m-d H:i:s.uO', $responseContent['timestamp']) ?: new \DateTime();
@@ -85,6 +89,10 @@ class ACIPaymentProvider implements PaymentProviderInterface
     }
 
 
+    /**
+     * @param array $responseContent
+     * @return string
+     */
     private function formatErrorMessage(array $responseContent): string
     {
         $messageParts = [];

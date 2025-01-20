@@ -68,6 +68,10 @@ class Shift4PaymentProvider implements PaymentProviderInterface
     }
 
 
+    /**
+     * @param array $responseContent
+     * @return array
+     */
     public function mapContentToUnifiedResponse(array $responseContent): array
     {
         return [
@@ -79,42 +83,3 @@ class Shift4PaymentProvider implements PaymentProviderInterface
         ];
     }
 }
-
-//Visa	4263982640269299	02/2026	837		Success
-
-/*
- * array:15 [▼
-  "id" => "char_kcKIaBZ4fCQjWRBuvoXGAGpu"
-  "created" => 1737316882
-  "objectType" => "charge"
-  "merchant" => "mrc_Qswts7cgjkDCE7sLs0xNP03b"
-  "amount" => 100
-  "amountRefunded" => 0
-  "currency" => "AED"
-  "card" => array:12 [▼
-    "id" => "card_ipTs4cn8kH62xlLfaPkHlwXb"
-    "created" => 1737316882
-    "objectType" => "card"
-    "first6" => "426398"
-    "last4" => "9299"
-    "fingerprint" => "PGNFB2UbAx1SVfPc"
-    "expMonth" => "02"
-    "expYear" => "2026"
-    "brand" => "Visa"
-    "type" => "Debit Card"
-    "country" => "US"
-    "issuer" => "SHIFT4 TEST"
-  ]
-  "captured" => true
-  "refunded" => false
-  "disputed" => false
-  "fraudDetails" => array:1 [▼
-    "status" => "in_progress"
-  ]
-  "avsCheck" => array:1 [▼
-    "result" => "unavailable"
-  ]
-  "status" => "successful"
-  "clientObjectId" => "client_char_0zNfV89LEW7Hcc7NuxDn53KS"
-]
- */
